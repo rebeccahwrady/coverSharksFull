@@ -1,0 +1,15 @@
+
+<div class = "col-sm-12" align="center" style = "margin-bottom: 20px;">
+    <input class = "inputBar" type="text" ng-model="tweet" size="30" value="What's happening?">
+    <div class = "inputBar" id = "wordCount" type="text" style = "width:30px">0</div>
+    <button class = "inputBar" ng-click = "postData()">Tweet</button>
+</div>
+
+
+<div id = "tweetDisplay" align="center" ng-repeat="tweet in tweetsArray | orderBy: '-'">
+    <p class = "col-sm-12"> <b>@{{ tweet.user }}</b> <br> {{ tweet.text }}</p>
+</div>
+
+<div align = "center" >
+    <button ng-click = "welcomePage()">Back to Welcome</button>
+</div>
