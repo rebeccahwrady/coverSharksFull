@@ -1,108 +1,33 @@
-var app = angular.module('myTweets', ['ngRoute']) //this is where you create your angular module
+var app = angular.module('myCover', ['ngRoute']) //this is where you create your angular module
 
-app.controller('myTweetsWelcomeCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the welcome html
+app.controller('myHomePageCtrl', ['$scope', '$rootScope', '$location', //this is the controller for the welcome page html
     function($scope, $rootScope, $location){
-
-        // ajax rest tweets 
-
-        $rootScope.nextPage = function(){
-            if($scope.userName != undefined){ 
-                $rootScope.username = $scope.userName;
-                $scope.userName = "";
-                $location.path('/tweets')
-            }
-            else{
-                alert('Wait! You cannot go forward! You did not enter a username!!!');
-            }
-        }
 
     }
 ]);
 
-app.controller('myTweetsPageCtrl', ['$scope', '$rootScope', '$location', '$interval',//this is the controller for the tweets html
-    function($scope, $rootScope, $location, $interval){
+app.controller('myAboutPageCtrl', ['$scope', '$rootScope', '$location',//this is the controller for the about page html
+    function($scope, $rootScope, $location){
 
-        var i = 0;
+    }  
+]);
 
-        $scope.tweets = {
-            username: $rootScope.username,
-            message: $scope.tweet
-        }
+app.controller('myHowToPageCtrl', ['$scope', '$rootScope', '$location',//this is the controller for the how to page html
+    function($scope, $rootScope, $location){
 
-        // $scope.countText = function(){
-        //     var textVal = $scope.tweet;
-        //     console.log(textVal);
-        //     // var textVal = " " + textVal.length + " ";
-        //     // console.log(textVal);
-        //     if (isNaN(textVal)){
-        //         $('#wordCount').css("color", "black");
-        //         textVal = 0;
-        //         $('#wordCount').empty(textVal);
-        //         $('#wordCount').append(textVal);
-        //     }
-        //     else if(textVal > 140){
-        //         $('#wordCount').css("color", "red");
-        //         $('#wordCount').empty(textVal);
-        //         $('#wordCount').append(140 - textVal);
-        //     }
-        //     else{
-        //         $('#wordCount').css("color", "black");
-        //         $('#wordCount').empty(textVal);
-        //         $('#wordCount').append(textVal);
-        //     }
-        // };
+    }  
+]);
 
-        $scope.postData = function() {
-		/*This function should create a post request using jquery. When posted it should:
-			1) Add tweets to the 'database'
-			2) After posted prepend message to list of messages and clear input box */
-		    var tweet = $scope.tweet;
-		    var userID = $rootScope.username;
-		    var textVal = $scope.tweet.length;
-            var timeCreated
+app.controller('myHowToVideosPageCtrl', ['$scope', '$rootScope', '$location',//this is the controller for the how to page html
+    function($scope, $rootScope, $location){
 
-		    if (tweet == "") {
-			    alert("Don't forget to add a tweet!");
-		    }
-            else if(userID == undefined){
-                alera("Please go back to the welcome page to log in!")
-            }
-		    else if(textVal > 140){
-		    	alert("Your tweet is greater than 140 characters! Please shorten it prior to sending.");
-		    }
-		    else {
-			    $.ajax({
-				    url: 'http://localhost:3000/api/tweets',
-				    type: 'POST',
-				    contentType: 'application/json',
-				    data: JSON.stringify({
-					    user: userID,
-					    text: tweet
-				    })
-			    }).then($('#tweetDisplay').prepend("<p class = 'col-sm-12'>" + '<b>' + "@" + userID + "</b><br>" + tweet + "<br></p>"));
-			    i++;
-			    $scope.tweet = "";
-		    };
-	    };
+    }  
+]);
 
-        $scope.getData = function() {
-            /*This function should make a get request from 'database', parse the data and prepend each to the page*/
-            $.ajax({
-                type: 'GET',
-                url: 'http://localhost:3000/api/tweets',
-                contentType: 'application/json'
-            }).then(function (success) {
-                $scope.tweetsArray = success;
-            })
-        }
+app.controller('myPromotionsPageCtrl', ['$scope', '$rootScope', '$location',//this is the controller for the promotions page html
+    function($scope, $rootScope, $location){
 
-        $scope.welcomePage = function(){
-            $location.path('/welcome');
-        }
-
-        $scope.getData();
-
-    }
+    } 
 ]);
 
 
@@ -110,13 +35,25 @@ app.controller('myTweetsPageCtrl', ['$scope', '$rootScope', '$location', '$inter
 //this is your address book
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
-        .when('/welcome', {//when we nav to localhost:3000/#/welcome...
-            templateUrl: 'views/welcome.html', //this is the file you are getting
-            controller: 'myTweetsWelcomeCtrl' //this is the controller that is called
+        .when('/home', {//when we nav to localhost:3000/#/welcome...
+            templateUrl: 'views/home.html', //this is the file you are getting
+            controller: 'myHomePageCtrl' //this is the controller that is called
         })
-        .when('/tweets', {
-            templateUrl: 'views/tweets.html',
-            controller: 'myTweetsPageCtrl'
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'myAboutPageCtrl'
+        })
+        .when('/howTo', {
+            templateUrl: 'views/howTo.html',
+            controller: 'myHowToPageCtrl'
+        })
+        .when('/howToVideos', {
+            templateUrl: 'views/howToVideos.html',
+            controller: 'myHowToVideosPageCtrl'
+        })
+        .when('/promotions', {
+            templateUrl: 'views/promotions.html',
+            controller: 'myPromotionsPageCtrl'
         })
         .otherwise({
             redirectTo: '/welcome'
