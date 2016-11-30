@@ -3,23 +3,71 @@
 <html x-ng-app="myCover">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:200,400,600,800|Work+Sans:200,400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800" rel="stylesheet">
 </head>
 
 <body>
     <!--nav bar placeholder-->
-    
+
     <div class="container">
         <div class="page-header">
             <h1>Cover Sharks</h1>
         </div>
     </div>
-    
+
     <!--ng-view is where html templetes will be loaded when page is navigated to-->
     <div ng-view></div>
 
     <!--footer placeholder-->
+
+  <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" id="footer-socialmedia">
+                    <img class="coversharks-bluelogo" src="./assets/logo-blue.svg">
+                    <br>
+                    <img class="facebook-footer" src="./assets/fb-blue.svg">
+                    <img class="twitter-footer" src="./assets/twitter-blue.svg">
+                </div>
+
+                <div class="col-md-4">
+
+                    <table rules="cols">
+
+                        <tr>
+                            <td>HOW TO PLAY</td>
+                            <td>PROMOTIONS</td>
+                        </tr>
+                        <tr>
+                            <td>ABOUT</td>
+                            <td>VIDEOS</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class=" col-md-4 ">
+                    <button type="button " class="btn btn-sucess btn-lg ">CONTACT</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="pull-left ">
+                    <div> COVERSHARKS LLC</div>
+                </div>
+                <div class="pull-right ">
+                    <div>POWERED BY PLATYPI</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
