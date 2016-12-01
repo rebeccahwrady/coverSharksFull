@@ -15,11 +15,31 @@
 <body>
     <!--nav bar placeholder-->
 
-    <div class="container">
-        <div class="page-header">
-            <h1>Cover Sharks</h1>
+    <nav class="navbar-light bg-faded">
+        <div id="navbar1" class="container-fluid">
+            <div class="navbar-header clearfix">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                 </button>
+                <a class="navbar-brand" href="#">
+                    <img class="nav-logo" src="../client/assets/home/logo-color.svg" alt="Main logo-blue">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse pull-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#promotions">PROMOTIONS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#how-to-play">HOW TO PLAY</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><img class="nav-logo-rgt" id="facebook" src="../client/assets/home/fb-grey.svg" alt="facebook logo"></li>
+                    <li><img class="nav-logo-rgt" id="twitter" src="../client/assets/home/twitter-grey.svg" alt="twitter logo"></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
     <!--ng-view is where html templetes will be loaded when page is navigated to-->
     <div ng-view>
@@ -31,10 +51,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4" id="footer-socialmedia">
-                    <img class="coversharks-bluelogo" src="./assets/logo-blue.svg">
+                    <img class="coversharks-bluelogo" src="../client/assets/home/logo-blue.svg">
                     <br>
-                    <img class="facebook-footer" src="./assets/fb-blue.svg">
-                    <img class="twitter-footer" src="./assets/twitter-blue.svg">
+                    <img class="facebook-footer" src="../client/assets/home/fb-blue.svg">
+                    <img class="twitter-footer" src="../client/assets/home/twitter-blue.svg">
                 </div>
 
                 <div class="col-md-4">
