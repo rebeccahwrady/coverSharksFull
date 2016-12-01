@@ -1,2 +1,234 @@
+/*-----------------------------------
+    navegation bar
+-----------------------------------*/
+
+nav {
+    display: inline;
+}
+
+.socialmedia {
+    display: inline;
+}
+
+.nav-logo {
+    width: 150px;
+}
 
 
+/* .nav {
+      display: inline;
+      padding: 25px;
+  }*/
+
+
+/*ul {
+    color: #a6a8ab;
+    text-decoration: none;
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+    padding: 14px 16px;
+    color: #a6a8ab;
+    float: right;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    size: 16px;*/
+
+
+/*
+      letter-spacing: 2px;
+      text-align: right;
+      padding: 25px;
+      display: inline;
+      align-content: center;
+         margin: 0; */
+
+
+}
+.nav-logo-rgt {
+    padding: 14px 16px;
+}
+nav. {
+    color: #a6a8ab;
+    size: 16px;
+}
+#facebook {
+    height: 60px;
+    width: 50px;
+    background-color: #f1f2f2;
+}
+#twitter {
+    height: 60px;
+    width: 100px;
+    background-color: #f1f2f2;
+    ;
+}
+.social-media-logo {
+    position: relative;
+}
+
+/*-----------------------------------
+    section 1
+-----------------------------------*/
+.blue-banner {
+    color: white;
+    background-color: deepskyblue;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 3em;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.paragraph {
+    color: white;
+    /*  font-family: 'Work Sans', san-serif;*/
+    
+    font-weight: 400;
+    margin-left: 15%;
+    font-size: 16px;
+}
+#sec1btn {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.hero-phone {
+    margin-top: 12.5%;
+}
+
+/*-----------------------------------
+    section 2
+-----------------------------------*/
+.yeti {
+    height: 25em;
+    position: relative;
+    z-index: 2;
+}
+.secdiv {
+    color: #a6a8ab;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+.parrafo2 {
+    align-self: center;
+    padding: 50px 30px 50px 80px;
+}
+.secdiv2 {
+    font-size: 2.5em;
+    color: rgb(61, 184, 147);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+/*-----------------------------------
+    section 3
+-----------------------------------*/
+.tilted-phone {
+    height: 40em;
+    padding: 25px 50px;
+}
+
+/*.tilted-phone {
+    color: deepskyblue;
+}
+*/
+.well well-lg {
+    width: 100%;
+    /*background: #ccc;*/
+    
+    margin: 10px 1%;
+    padding: 1%;
+    margin: 25px 50px 75px;
+}
+@media all and (max-width: 900px) {
+    article {
+        width: 48%
+    }
+}
+.app-image {
+    width: 100%;
+    align-items: center;
+}
+#firstdiv {
+    background-image: url(./assets/coversharks-web-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 45em;
+}
+#secbg {
+    background-image: url(./assets/bkgrnd.svg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: 9999;
+}
+#secdiv {
+    background-image: url(./assets/coversharks-mark-white.svg);
+    background-position: center;
+    background-size: cover;
+    height: 30em;
+}
+#thrirddiv {
+    background-image: url(./assets/bkgrnd.svg);
+    background-position: center;
+    background-size: cover;
+    height: 39em;
+}
+
+/*-----------------------------------
+    section 4
+-----------------------------------*/
+#sec4btn {
+    margin: 10%;
+    padding: 25px;
+}
+#sec4 {
+    background-color: lightgrey;
+}
+#sec4p {
+    padding: 30px 50px 75px 100px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    color: #2995c7;
+}
+#sec4p2 {
+    color: #2995c7;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    padding: 50px 30px 30px 50px;
+}
+
+/*-----------------------------------
+    footer
+-----------------------------------*/
+.coversharks-bluelogo {
+    width: 20%;
+}
+.facebook-footer {
+    width: 2%;
+}
+.twitter-footer {
+    width: 5%;
+}
+td {
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+    padding: 15%;
+}
+table {
+    padding: 15px;
+}
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
