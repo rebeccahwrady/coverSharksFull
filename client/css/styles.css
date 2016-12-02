@@ -174,14 +174,14 @@ li {
 }
 
 #firstdiv {
-    background-image: url(./assets/coversharks-web-hero.jpg);
+    background-image: url(../assets/home/coversharks-web-hero.jpg);
     background-position: center;
     background-size: cover;
     height: 45em;
 }
 
 #secbg {
-    background-image: url(./assets/bkgrnd.svg);
+    background-image: url(../assets/home/bkgrnd.svg);
     background-position: center;
     background-size: cover;
     opacity: 0.6;
@@ -189,14 +189,14 @@ li {
 }
 
 #secdiv {
-    background-image: url(./assets/coversharks-mark-white.svg);
+    background-image: url(../assets/home/coversharks-mark-white.svg);
     background-position: center;
     background-size: cover;
     height: 30em;
 }
 
 #thrirddiv {
-    background-image: url(./assets/bkgrnd.svg);
+    background-image: url(../assets/bkgrnd.svg);
     background-position: center;
     background-size: cover;
     height: 39em;

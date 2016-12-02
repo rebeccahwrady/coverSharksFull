@@ -2,6 +2,7 @@
 <!--used to auto bootstrap the app-->
 <html x-ng-app="myCover">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,32 +15,38 @@
 
 <body>
     <!--nav bar placeholder-->
-
-    <nav class="navbar-light bg-faded">
-        <div id="navbar1" class="container-fluid">
-            <div class="navbar-header clearfix">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img class="nav-logo" style="float-left" src="assets/home/logo-color.svg" alt="Main logo-blue">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="sr-only">Toggle navigation></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span> 
-                 </button>
-                <a class="navbar-brand" href="#">
-                    <img class="nav-logo" src="../client/assets/home/logo-color.svg" alt="Main logo-blue">
-                </a>
+                </button>
+
             </div>
-            <div class="collapse navbar-collapse pull-right" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#promotions">PROMOTIONS</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#how-to-play">HOW TO PLAY</a></li>
-                </ul>
-                <ul class="nav navbar-nav pull-right">
-                    <li><img class="nav-logo-rgt" id="facebook" src="../client/assets/home/fb-grey.svg" alt="facebook logo"></li>
-                    <li><img class="nav-logo-rgt" id="twitter" src="../client/assets/home/twitter-grey.svg" alt="twitter logo"></li>
-                </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <div class="nav navbar-nav navbar-right">
+                    <img class="nav-logo-rgt" id="twitter" src="assets/home/twitter-grey.svg" alt="twitter logo">
+                    <img class="nav-logo-rgt" id="facebook" src="assets/home/fb-grey.svg" alt="facebook logo">
+
+                    <ul class="nav navbar-nav float-right">
+                        <li><a href="#promotions">HOW TO PLAY</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#how-to-play">PROMOTIONS</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
+
+
+
+
+
 
     <!--ng-view is where html templetes will be loaded when page is navigated to-->
     <div ng-view>
@@ -51,10 +58,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4" id="footer-socialmedia">
-                    <img class="coversharks-bluelogo" src="../client/assets/home/logo-blue.svg">
+                    <img class="coversharks-bluelogo" src="assets/home/logo-blue.svg">
                     <br>
-                    <img class="facebook-footer" src="../client/assets/home/fb-blue.svg">
-                    <img class="twitter-footer" src="../client/assets/home/twitter-blue.svg">
+                    <img class="facebook-footer" src="assets/home/fb-blue.svg">
+                    <img class="twitter-footer" src="assets/home/twitter-blue.svg">
                 </div>
 
                 <div class="col-md-4">
